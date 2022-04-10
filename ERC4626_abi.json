@@ -1,0 +1,386 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "from_",
+                "type": "felt"
+            },
+            {
+                "name": "to",
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Transfer",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "spender",
+                "type": "felt"
+            },
+            {
+                "name": "value",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Approval",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "caller",
+                "type": "felt"
+            },
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Deposit",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "caller",
+                "type": "felt"
+            },
+            {
+                "name": "receiver",
+                "type": "felt"
+            },
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Withdraw",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "total_assets",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            }
+        ],
+        "name": "convert_to_shares",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            }
+        ],
+        "name": "convert_to_assets",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            }
+        ],
+        "name": "preview_deposit",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            }
+        ],
+        "name": "preview_mint",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            }
+        ],
+        "name": "preview_withdraw",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            }
+        ],
+        "name": "preview_redeem",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "max_deposit",
+        "outputs": [
+            {
+                "name": "maximum_deposit",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "max_mint",
+        "outputs": [
+            {
+                "name": "maximum_mint",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "felt"
+            }
+        ],
+        "name": "max_withdraw",
+        "outputs": [
+            {
+                "name": "maximum_withdraw",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "felt"
+            }
+        ],
+        "name": "max_redeem",
+        "outputs": [
+            {
+                "name": "maximum_redeem",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_asset",
+                "type": "felt"
+            },
+            {
+                "name": "_name",
+                "type": "felt"
+            },
+            {
+                "name": "_symbol",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "deposit",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            }
+        ],
+        "name": "mint",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_assets",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            },
+            {
+                "name": "_owner",
+                "type": "felt"
+            }
+        ],
+        "name": "withdraw",
+        "outputs": [
+            {
+                "name": "shares",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_shares",
+                "type": "Uint256"
+            },
+            {
+                "name": "_receiver",
+                "type": "felt"
+            },
+            {
+                "name": "_owner",
+                "type": "felt"
+            }
+        ],
+        "name": "redeem",
+        "outputs": [
+            {
+                "name": "assets",
+                "type": "Uint256"
+            }
+        ],
+        "type": "function"
+    }
+]
